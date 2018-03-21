@@ -1,0 +1,188 @@
+/* --------page parameters------ */
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 500px;
+  height: 1500px;
+  vertical-align: middle;
+  margin: 1rem auto 1rem auto;
+}
+
+button:hover {
+  color:#ffffff;
+  background-color: EB008B;
+}
+
+button:focus-within, input:focus-within {
+  box-shadow: 0 0 4px 6px pink;
+}
+
+/* -------header styles------ */
+header {
+  background-color: #404041;
+  width: 100%;
+  text-align: center;
+  height: 100px;
+}
+
+.first {
+  color: #ED458B;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 100px;
+  font-size: 300%;
+}
+
+.second {
+  color: #E6E7E8;
+  font-weight: 300;
+  display: inline-block;
+  line-height: 100px;
+  width: 200px;
+  font-size: 300%;
+}
+
+/* ------input form styles------*/
+input {
+  width: 390px;
+  height: 50px;
+  margin: 1rem auto 1rem auto;
+  display: block;
+  border: 2px solid #D0D2D3;
+  font-size: 2rem;
+  padding-left: .8rem;
+  color: black;
+}
+
+input::placeholder {
+  color: lightgrey;
+  font-size: 1.7rem;
+}
+
+form {
+  vertical-align: middle;
+  display: block;
+  text-align: center;
+}
+
+/*------clear & guess button styles-----*/
+.buttons {
+  font-size: x-large;
+  color: #FFFFFF;
+  background-color: #D0D2D3;
+  width: 178px;
+  height: 40px;
+  border-radius: 115px;
+  margin: 1rem;
+}
+
+.buttons:disabled {
+  opacity: .5;  
+}
+
+.buttons:disabled:hover {
+  background-color: #D0D2D3
+}
+/*------min & max input form styles-----*/
+.minPair {
+  float: left;
+  text-align: right;
+  margin-left: 15rem;
+}
+
+.maxPair {
+  float: right;
+  margin-right: 15rem;
+}
+
+.minMaxInputs {
+  width: 9rem;
+  height: 2rem;
+  font-size: .8rem;
+  padding: .4rem 0 0 .4rem;
+}
+
+
+/* ---------feedback---------- */
+h2 {
+  text-align: center;
+  color: #404041;
+  font-size: x-large;
+  font-weight: 300;
+  width: 350;
+  height: 40px;
+  vertical-align: middle;
+  margin: 55 auto -40 auto;
+}
+
+h3 {
+  font-weight: 300;
+  color: #EB008B;
+  text-align: center;
+  font-size: 1250%;
+}
+
+p {
+  text-align: center;
+  margin: -30 auto 50 auto;
+  font-size: 165%}
+
+/*------reset button styles-------*/
+#reset-button {
+  font-size: large;
+  color: #ffffff;
+  background-color: #D0D2D3;
+  width: 400px;
+  height: 40px;
+  border-radius: 115px;
+  display: block;
+  margin: 1rem auto 1rem auto;
+}
+
+#reset-button:hover {
+  color:#ffffff;
+  background-color: EB008B;
+}
+
+#reset-button:disabled {
+  opacity: .5;
+}
+
+#reset-button:disabled:hover {
+  background-color: #D0D2D3
+}
+
+article {
+  width: 20rem;
+  height: 10rem;
+}
+
+.minMaxInputs {
+  display: inline-grid;
+}
+
+.minPair {
+  position:relative;
+  display: inline;
+  margin: 1.37rem 2rem 0 25%;
+  color: pink;
+}
+
+.maxPair {
+  position:absolute;
+  display: inline:;
+  margin: 0 3rem 0 0;
+}
+
+.minMaxButton {
+  margin: auto;
+  
+}
+
+.minMaxButton:hover {
+  background-color: pink;
+}

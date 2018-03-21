@@ -1,0 +1,43 @@
+ <!DOCTYPE html lang=en>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Number Guesser</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+    <link rel="icon" type="icon/favicon" href="http://chatfield.k12.mn.us/SiteCollectionImages/pink-jelly-icon-alphanumeric-full-set/073316-pink-jelly-icon-alphanumeric-full-set/073291-pink-jelly-icon-alphanumeric-number-sign.png">
+    <link rel ="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="first">Number</h1> 
+      <h1 class="second">Guesser</h1>
+    </header>
+    <main>
+      <form id="enterForm">
+        <label for="enterNumber"></label>
+        <input type="number" id="enterNumber" name="box" placeholder="Enter your guess" maxLength="3" required="true" min="1" max="100">
+        <button type="submit" class="buttons" id="clearer" value="clear" disabled="true">CLEAR</button>
+        <button type="submit" class="buttons" id="guesser" value="guess" disabled="true">GUESS</button>
+        <br>
+      </form>
+       <section> 
+        <h2>Your last guess was...</h2>
+        <h3 id="guessedNumber">?</h3>
+        <p id="feedback"></p>
+        <form>
+        <button type="submit" id="reset-button" value="reset" disabled="true">RESET</button>
+        <article>
+        <label for="minField" class="minPair" id="currentMin"></label>
+        <br>
+        <input type="number" class="minPair minMaxInputs" id="minField" name="minimum" placeholder="Min #">
+        <label for="maxField" class="maxPair" id="currentMax"></label>
+        <br>
+        <input type="number" class="maxPair minMaxInputs" id="maxField" name="maximum" placeholder="Max #">
+        </article>
+        <button type="submit" class="minMaxButton" name="Submit" value="Submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <script type="text/javascript" src="style.js"></script>
+  </body>
+</html>
