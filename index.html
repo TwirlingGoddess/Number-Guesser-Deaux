@@ -12,31 +12,33 @@
       <h1 class="first">Number</h1> 
       <h1 class="second">Guesser</h1>
     </header>
+    <form class="fieldset">
+    <fieldset>
+      <legend>1ST: Enter Minimum and Maximum Range</legend>
+        <label for="minField" class="minPair" id="currentMin" value="integer">.</label>
+        <input type="number" class="minPair minMaxInputs" id="minField" name="minimum" placeholder="Min #">
+        <label for="maxField" class="maxPair" id="currentMax" value="integer">.</label>
+        <input type="number" class="maxPair minMaxInputs" id="maxField" name="maximum" placeholder="Max #">
+        <br>
+    </fieldset>
+        <button type="submit" class="buttons" id="minMaxButton" name="Submit" value="Submit">Submit</button>
+      </form>
     <main>
       <form id="enterForm">
         <label for="enterNumber"></label>
-        <input type="number" id="enterNumber" name="box" placeholder="Enter your guess" maxLength="3" required="true" min="1" max="100">
+        <input type="number" class="mainInput" id="enterNumber" name="box" placeholder="2ND: Enter # within Range" maxLength="3" required="true" min="1" max="100">
         <button type="submit" class="buttons" id="clearer" value="clear" disabled="true">CLEAR</button>
         <button type="submit" class="buttons" id="guesser" value="guess" disabled="true">GUESS</button>
         <br>
       </form>
-       <section> 
+       <article> 
         <h2>Your last guess was...</h2>
-        <h3 id="guessedNumber">?</h3>
-        <p id="feedback"></p>
+        <h3 id="guessedNumber" aria-live="true">?</h3>
+        <p id="feedback" aria-live="true"></p>
         <form>
-        <button type="submit" id="reset-button" value="reset" disabled="true">RESET</button>
-        <article>
-        <label for="minField" class="minPair" id="currentMin"></label>
-        <br>
-        <input type="number" class="minPair minMaxInputs" id="minField" name="minimum" placeholder="Min #">
-        <label for="maxField" class="maxPair" id="currentMax"></label>
-        <br>
-        <input type="number" class="maxPair minMaxInputs" id="maxField" name="maximum" placeholder="Max #">
-        </article>
-        <button type="submit" class="minMaxButton" name="Submit" value="Submit">Submit</button>
+          <button type="submit" id="reset-button" value="reset" disabled="true">RESET</button>
         </form>
-      </section>
+      </article>
     </main>
     <script type="text/javascript" src="style.js"></script>
   </body>
