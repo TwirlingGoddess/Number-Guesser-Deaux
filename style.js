@@ -1,6 +1,5 @@
 // -------- asign stage names --------- //
 var inputField = document.getElementById('enterNumber');
-// var formSection = document.getElementById('enterForm')
 var guessButton = document.getElementById('guesser');
 var clearButton = document.getElementById('clearer');
 var resetButton = document.getElementById('reset-button');
@@ -11,6 +10,7 @@ var maximumField = document.getElementById('maxField');
 var minAndMaxSubmit = document.getElementById('minMaxButton');
 var currentMin = document.getElementById('currentMin');
 var currentMax = document.getElementById('currentMax');
+// var guessCounter = document.getElementById('counterThing');
 var randomMinMax = Math.floor(Math.random() * (parsedMax - parsedMin + 1) + parsedMin);
 var parsedMin = 1;
 var parsedMax = 100;
@@ -57,35 +57,23 @@ function guessResults(event) {
   event.preventDefault();
   var parsedInput = parseInt(inputField.value)
   numberGuessed.innerText = inputField.value;
-  // clearInput();
-  console.log(parsedInput);
-  console.log(randomMinMax);
   if (parsedInput > randomMinMax && parsedInput < maximumField.value) {
     guessFeedback.innerText = "That is too high";
-    clearInput();
   } else if (parsedInput < randomMinMax && parsedInput > minimumField.value) {
       guessFeedback.innerText = "That is too low";
-      clearInput();
   } else if (parsedInput === randomMinMax) {
       guessFeedback.innerText = "HAAAAAAAYYYYYYY!!!!  That was too easy. 10 digits added in both directions. Enter a new guess.";
       parsedMin = parseInt(inputField.min - 10);
       parsedMax = parseInt(inputField.max + 10);    
       currentMax.innerText = parsedMax;
       currentMin.innerText = parsedMin;
+      inputField.min = parsedMin;
+      inputField.max = parsedMax; 
   } else {
       alert('ENTER A VALID NUMBER BETWEEN YOUR MIN AND MAX RANGE....... PLEASE & THANK YOU!!!')
   }
+      clearInput();
 }
-
-// function blessUp() {
-//   parsedMin = (inputField.min - 10);
-//   parsedMax = (inputField.max + 10);    
-//   randomMinMax = Math.floor(Math.random() * (parsedMax - parsedMin) + parsedMin);
-//   currentRange();
-//       clearInput();
-//       clearMinMax();
-//   return randomMinMax;
-// }
 
 function clearInput() {
   inputField.value = ('');
@@ -96,5 +84,17 @@ function clearMinMax() {
   minimumField.value = ('');
   maximumField.value = ('');
 }
-// ---------------------------------------------level up
-// toggle/transform(rotate -1800deg)/translate/scale(2) to get the number to spin when the answer is correct.
+
+// ------------Phase 4 COUNTER-------------
+// function countMyGuesses() {
+//    for (i = 0; i < guessButton.click; i++) {
+//    guessCounter.innertext = getEventListeners(guessButton);
+//    return getEventListeners(guessButton);
+//    console.log (getEventListeners(guessButton));
+// }
+
+// }-----------------level up toggle spinning on win----------------
+// toggle/transform(rotate -1800deg)/translate/scale(2) to get 
+//   the number to spin when the answer is correct.
+//   transform: rotate(-1800deg);
+//   transform: scale(2, 0.5);

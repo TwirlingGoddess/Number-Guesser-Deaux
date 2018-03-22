@@ -1,5 +1,5 @@
- <!DOCTYPE html lang=en>
-<html>
+ <!DOCTYPE>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Number Guesser</title>
@@ -13,25 +13,25 @@
       <h1 class="second">Guesser</h1>
     </header>
     <form class="fieldset">
-    <fieldset>
-      <legend>1ST: Enter Minimum and Maximum Range</legend>
-        <label for="minField" class="minPair" id="currentMin" value="integer">.</label>
-        <input type="number" class="minPair minMaxInputs" id="minField" name="minimum" placeholder="Min #">
-        <label for="maxField" class="maxPair" id="currentMax" value="integer">.</label>
-        <input type="number" class="maxPair minMaxInputs" id="maxField" name="maximum" placeholder="Max #">
-        <br>
-    </fieldset>
+      <fieldset>
+        <legend>1ST: Enter Minimum and Maximum Range</legend>
+          <label for="minField" class="minPair" id="currentMin" value="integer"></label>
+          <input type="number" class="minPair minMaxInputs" id="minField" name="minimum" placeholder="Min #">
+          <label for="maxField" class="maxPair" id="currentMax" value="integer"></label>
+          <input type="number" class="maxPair minMaxInputs" id="maxField" name="maximum" placeholder="Max #">
+          <br>
+      </fieldset>
         <button type="submit" class="buttons" id="minMaxButton" name="Submit" value="Submit">Submit</button>
-      </form>
+    </form>
     <main>
       <form id="enterForm">
-        <label for="enterNumber"></label>
+        <label for="enterNumber" id="counterThing"># of guesses</label>
         <input type="number" class="mainInput" id="enterNumber" name="box" placeholder="2ND: Enter # within Range" maxLength="3" required="true" min="1" max="100">
         <button type="submit" class="buttons" id="clearer" value="clear" disabled="true">CLEAR</button>
         <button type="submit" class="buttons" id="guesser" value="guess" disabled="true">GUESS</button>
         <br>
       </form>
-       <article> 
+      <article> 
         <h2>Your last guess was...</h2>
         <h3 id="guessedNumber" aria-live="true">?</h3>
         <p id="feedback" aria-live="true"></p>
